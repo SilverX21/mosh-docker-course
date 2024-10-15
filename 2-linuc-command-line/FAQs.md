@@ -39,3 +39,11 @@ To remove this package, you just need to run `apt remove nano`.
 `pwd` - prints the current working directory
 `ls` - prints the directory files
 `ls -l` - prints the directory files in an more detailed way
+`mv old_folder_name new_folder_name` - changes the folder name to a new name
+`touch file_name.file_extension` - creates a file with a given name and extension. We can also create many files in one go, like this `touch file1.txt file2.txt`
+`rm file_name` - removes a given file. We can also delete many files like this `rm file1.txt file2.txt` or we can use a rule, something like this `rm file*` (we are saying remove every file that starts with the name "file")
+`rm -r directory_name` - removes a given directory. if we try without the `-r` it will fail. So use that flag to remove a directory
+`cat file_name` - checks the content of a given file
+`cat file_name1 file_name2 ...` - we can combine multiple files together and check the output like this `cat file1.txt file2.txt`and it will the output of the files specified
+`more file_name` - is adjusted to check longer files. To navigate between the pages, you just need to click in the "space bar". If you want to check a line at a time, you can press "Enter". To exit press the "Q" key
+`>` this is the redirect operator. This redirects an output to something or somewhere else. In this case, we can do something like this: `cat file_name1 > file_name2`. This will pick the content of the `file_name1` and write it in the `file_name2`. We can combine multiple files and merge them into one like this `cat file1.txt file2.txt > combine.txt`
