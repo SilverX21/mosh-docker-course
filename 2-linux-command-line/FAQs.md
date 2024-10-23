@@ -121,5 +121,3 @@ NOTE 2: when we do `ls- ls` we can see the files permissions, example:
 - `chmod u+permission_to_give file_or_directory_name` - this changes the permissions of a file to a given user. The permissions to give (permission_to_give) are: "x" (execute), "r" (read) and "w" (write). Exanmple: `chmod u+x deploy.sh`.
   We can also use `chmod g+permission_to_give file_or_directory_name` to change the permissions to the group and `chmod o+permission_to_give file_or_directory_name` tho others. If we use an `-` instead of the `+` we are going to remove the permissions.
   we can chain the commands like this: `chmod og+x+w-r deploy.sh`, in this example, we are changing the permissions to the group and others, and we are adding permissions to execute and write, and removing the read.
-- ``
-- ``
