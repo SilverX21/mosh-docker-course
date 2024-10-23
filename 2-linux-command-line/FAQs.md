@@ -108,13 +108,14 @@ NOTE: to try to login as the user we created, we can do something like this: `do
 NOTE 1: files that end with ".sh" are shell scripts, in these we can write all the commands that we learned so far.
 
 NOTE 2: when we do `ls- ls` we can see the files permissions, example:
-ex1: "drwxr-x--- 2 john john 4096 Oct 23 22:38 john"
-ex2: "-rw-r--r-- 1 root root 11 Oct 23 23:28 deploy.sh"
-If it beggins with a "d" it means it's a directory, if it beggins with a "-" it means it's a file.
-after that first character, it follows 3 groups (each group has 3 characters): the first is "read", then the next is "write", and the third is "execute". If there's an hifen instead of a letter, it means the user doesn't have permission to execute that command.
-The first group represents the permissions of the user that owns the file. (ex1: john)
-The first group represents the permissions of the group that owns the file (ex2: root).
-The third group represents the permissions to everyone else.
+
+- ex1: "drwxr-x--- 2 john john 4096 Oct 23 22:38 john"
+- ex2: "-rw-r--r-- 1 root root 11 Oct 23 23:28 deploy.sh"
+  If it beggins with a "d" it means it's a directory, if it beggins with a "-" it means it's a file.
+  after that first character, it follows 3 groups (each group has 3 characters): the first is "read", then the next is "write", and the third is "execute". If there's an hifen instead of a letter, it means the user doesn't have permission to execute that command.
+  The first group represents the permissions of the user that owns the file. (ex1: john)
+  The first group represents the permissions of the group that owns the file (ex2: root).
+  The third group represents the permissions to everyone else.
 
 - `chmod u+permission_to_give file_or_directory_name` - this changes the permissions of a file to a given user. The permissions to give (permission_to_give) are: "x" (execute), "r" (read) and "w" (write). Exanmple: `chmod u+x deploy.sh`.
   We can also use `chmod g+permission_to_give file_or_directory_name` to change the permissions to the group and `chmod o+permission_to_give file_or_directory_name` tho others. If we use an `-` instead of the `+` we are going to remove the permissions.
